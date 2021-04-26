@@ -11,3 +11,10 @@ test('string it up', () => {
   const output = stringItUp(input); // act
   expect(output).toEqual(['2', '5', '100']); // assert
 });
+
+// test('capitalize names', () => {
+//   const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]; // arrange
+//   const output = stringItUp(input); // act
+//   expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"]); // assert
+// });
+
