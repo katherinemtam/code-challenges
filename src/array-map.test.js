@@ -1,4 +1,4 @@
-import { doubleNumbers, stringItUp } from './array-map';
+import { doubleNumbers, stringItUp, namesOnly } from './array-map';
 
 test('doubles numbers', () => {
   const input = [2, 5, 100]; // arrange
@@ -18,3 +18,35 @@ test('string it up', () => {
 //   expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"]); // assert
 // });
 
+test('names only', () => {
+  const input = [
+    {
+      name: 'Angelina Jolie',
+      age: 80
+    },
+    {
+      name: 'Eric Jones',
+      age: 2
+    },
+    {
+      name: 'Paris Hilton',
+      age: 5
+    },
+    {
+      name: 'Kayne West',
+      age: 16
+    },
+    {
+      name: 'Bob Ziroll',
+      age: 100
+    }
+  ]; // arrange
+  const output = namesOnly(input); // act
+  expect(output).toEqual([
+    'Angelina Jolie',
+    'Eric Jones',
+    'Paris Hilton',
+    'Kayne West',
+    'Bob Ziroll'
+  ]); // assert
+});
