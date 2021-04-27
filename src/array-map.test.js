@@ -1,4 +1,4 @@
-import { doubleNumbers, stringItUp, namesOnly, makeStrings, readyToPutInTheDOM } from './array-map';
+import { doubleNumbers, stringItUp, capitalizeNames, namesOnly, makeStrings, readyToPutInTheDOM } from './array-map';
 
 test('doubles numbers', () => {
   const input = [2, 5, 100]; // arrange
@@ -12,11 +12,11 @@ test('string it up', () => {
   expect(output).toEqual(['2', '5', '100']); // assert
 });
 
-// test('capitalize names', () => {
-//   const input = ["john", "JACOB", "jinGleHeimer", "schmidt"]; // arrange
-//   const output = stringItUp(input); // act
-//   expect(output).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"]); // assert
-// });
+test('capitalize names', () => {
+  const input = ['john', 'JACOB', 'jinGleHeimer', 'schmidt']; // arrange
+  const output = capitalizeNames(input); // act
+  expect(output).toEqual(['John', 'Jacob', 'Jingleheimer', 'Schmidt']); // assert
+});
 
 test('names only', () => {
   const input = [
