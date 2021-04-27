@@ -21,3 +21,7 @@ export function makeStrings(arr) {
     else return `${n.name} is under age!!`;
   });
 }
+
+export function readyToPutInTheDOM(arr) {
+  return arr.map(n => `<h1>${n.name}</h1><h2>${n.age}</h2>`);
+}
