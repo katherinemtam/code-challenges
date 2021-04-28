@@ -9,3 +9,9 @@ export function fiveCharactersOrFewerOnly(arr) {
     return n.length <= 5;
   });
 }
+
+export function peopleWhoBelongToTheIlluminati(arr) {
+  return arr.filter(n => {
+    return n.member === true;
+  });
+}
