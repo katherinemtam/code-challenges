@@ -15,3 +15,9 @@ export function peopleWhoBelongToTheIlluminati(arr) {
     return n.member === true;
   });
 }
+
+export function ofAge(arr) {
+  return arr.filter(n => {
+    return n.age >= 18;
+  });
+}

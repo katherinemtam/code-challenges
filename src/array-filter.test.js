@@ -1,4 +1,4 @@
-import { evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati } from './array-filter.js';
+import { evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './array-filter.js';
 
 test('evens only', () => {
   const input = [3, 6, 8, 2]; // arrange
@@ -25,5 +25,20 @@ test('people who belong to the Illuminati', () => {
     { name: 'Angelina Jolie', member: true },
     { name: 'Paris Hilton', member: true },
     { name: 'Bob Ziroll', member: true }
+  ]); // assert
+});
+
+test('of age', () => {
+  const input = [
+    { name: 'Angelina Jolie', age: 80 },
+    { name: 'Eric Jones', age: 2 },
+    { name: 'Paris Hilton', age: 5 },
+    { name: 'Kayne West', age: 16 },
+    { name: 'Bob Ziroll', age: 100 }
+  ]; // arrange
+  const output = ofAge(input); // act
+  expect(output).toEqual([
+    { name: 'Angelina Jolie', age: 80 },
+    { name: 'Bob Ziroll', age: 100 }
   ]); // assert
 });
