@@ -9,9 +9,7 @@ export function sortedKeys(obj) {
 }
 
 export function getFilteredKey(obj) {
-  return Object.keys(obj).filter(key => {
-    if (key === 'age') return key;
-  });
+  return Object.keys(obj).filter(key => key === 'age');
 }
 
 export function getArrayOfKeysAndValues(obj) {
