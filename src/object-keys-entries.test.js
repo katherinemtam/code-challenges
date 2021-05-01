@@ -11,3 +11,9 @@ test('sorted keys', () => {
   const output = sortedKeys(dataObject); //act
   expect(output).toEqual(['age', 'name', 'isDog', 'friends']); //assert
 });
+
+test('get filtered key', () => {
+  const dataObject = { name: 'Angelina Jolie', isSpot: false, age: 80, }; //arrange
+  const output = getFilteredKey(dataObject); //act
+  expect(output).toEqual(['age']); //assert
+});
