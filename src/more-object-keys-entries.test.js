@@ -45,7 +45,7 @@ const characters = [
   }
 ];
 
-test.only('it gets the names of the houses', () => {
+test('it gets the names of the houses', () => {
   const output = getHouses(characters); //act
   expect(output).toEqual(expect.arrayContaining(['Greyjoy', 'Snow', 'Arryn', 'Tyrell', 'Lannister', 'Targaryen', 'Stark'])); //assert
 });
@@ -62,8 +62,11 @@ test('it gets the house size', () => {
 });
 
 test('it checks if the character has children', () => {
-  const output = hasChildrenEntries(characters); //act
-  expect(output).toEqual(true); //assert
+
+  const output1 = hasChildrenEntries(characters, 'Eddard'); //act
+  const output2 = hasChildrenEntries(characters, 'Euron'); //act
+  expect(output1).toEqual(true); //assert
+  expect(output2).toEqual(false); //assert
 });
 
 test('it sorts through an array of objects. The houses are sorted by amount of children (and if needed also alphabetically). ((if two houses have the same amount of children or no children, the house name should sort alphabetically))', () => {
