@@ -1,5 +1,5 @@
 export function getHouses(obj) {
-
+  return Object.values(obj).map(n => n.house);
 }
 
 export function updateNumbers(obj) {
