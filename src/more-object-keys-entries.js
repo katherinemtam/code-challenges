@@ -13,8 +13,16 @@ export function updateNumbers(obj) {
 export function totalCharacters(arr) {
 }
 
-export function hasChildrenEntries(array, character) {
-
+export function hasChildrenEntries(arr, character) {
+  let children = 0;
+  Object.entries(arr).forEach(n => {
+    n.forEach(person => {
+      if (person.name === character) {
+        children = person.children.length > 0 ? true : false;
+      }
+    });
+  });
+  return children;
 }
 
 export function sortByChildren(arr) {

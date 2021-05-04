@@ -61,7 +61,7 @@ test('it gets the house size', () => {
   expect(output).toEqual(26); //assert
 });
 
-test('it checks if the character has children', () => {
+test.only('it checks if the character has children', () => {
 
   const output1 = hasChildrenEntries(characters, 'Eddard'); //act
   const output2 = hasChildrenEntries(characters, 'Euron'); //act
