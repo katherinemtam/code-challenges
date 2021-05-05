@@ -1,3 +1,6 @@
+import { getAllByAltText } from "@testing-library/dom";
+import { traverseTwoPhase } from "react-dom/test-utils";
+
 export function getHouses(obj) {
   return Object.values(obj).map(n => n.house);
 }
@@ -11,12 +14,30 @@ export function updateNumbers(obj) {
 }
 
 export function totalCharacters(arr) {
+  let charCount = 0;
+
+  arr.forEach(family => {
+    Object.keys(family).forEach(property => {
+
+      const value = family[property];
+
+      if (property !== 'house' && property !== 'children') {
+
+        if (value) charCount++;
+      }
+
+      if (property === 'children') value.forEach(child => charCount++);
+
+    });
+  });
+
+  return charCount;
 }
 
 export function hasChildrenEntries(arr, character) {
   let children = 0;
-  Object.entries(arr).forEach(n => {
-    n.forEach(person => {
+  Object.entries(arr).forEach(family => {
+    family.forEach(person => {
       if (person.name === character) {
         children = person.children.length > 0 ? true : false;
       }

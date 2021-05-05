@@ -56,12 +56,12 @@ test('it updates numbers', () => {
   expect(output).toEqual(['Grace Hopper: 222-303-5938', 'Ada Lovelace: 222-349-9842', 'Alan Turing: 222-853-5933']); //assert
 });
 
-test('it gets the house size', () => {
+test.only('it gets the house size', () => {
   const output = totalCharacters(characters); //act
   expect(output).toEqual(26); //assert
 });
 
-test.only('it checks if the character has children', () => {
+test('it checks if the character has children', () => {
 
   const output1 = hasChildrenEntries(characters, 'Eddard'); //act
   const output2 = hasChildrenEntries(characters, 'Euron'); //act
