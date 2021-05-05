@@ -1,6 +1,3 @@
-import { getAllByAltText } from "@testing-library/dom";
-import { traverseTwoPhase } from "react-dom/test-utils";
-
 export function getHouses(obj) {
   return Object.values(obj).map(n => n.house);
 }
@@ -47,4 +44,9 @@ export function hasChildrenEntries(arr, character) {
 }
 
 export function sortByChildren(arr) {
+  return arr.sort((a, b) => {
+    const childrenLength = a.children.length - b.children.length;
+    if (childrenLength !== 0) return childrenLength;
+    return (a.name < b.name);
+  });
 }
