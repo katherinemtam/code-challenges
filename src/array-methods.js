@@ -15,7 +15,14 @@ export function wordsToCharList(str) {
 }
 
 export function listFoods(recipe) {
-
+  let arr = [];
+  recipe.ingredients.map(n => {
+    const split = n.split(' ');
+    const amount = `${split[0]} ${split[1]}`;
+    arr.push(n.replace(`${amount} `, ''));
+    return arr;
+  });
+  return arr;
 }
 
 export function stepActions(recipe) {
