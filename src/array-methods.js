@@ -7,7 +7,11 @@ export function howMuchPencil(str) {
 }
 
 export function wordsToCharList(str) {
-
+  let arr = [];
+  for (let letter of str) {
+    arr.push(letter);
+  }
+  return arr;
 }
 
 export function listFoods(recipe) {
