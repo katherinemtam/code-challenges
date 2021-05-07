@@ -26,7 +26,14 @@ export function listFoods(recipe) {
 }
 
 export function stepActions(recipe) {
-
+  let arr = [];
+  recipe.steps.map(n => {
+    const split = n.split(' ');
+    const action = `${split[0]}`;
+    arr.push(action);
+    return arr;
+  });
+  return arr;
 }
 
 export function removeLastCharacters(str, numberOfCharacters) {
