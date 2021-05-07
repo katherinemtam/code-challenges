@@ -62,12 +62,12 @@ test('removeLastCharacters', () => {
 });
 
 // stretch goals
-test.only('totalSumCSV', () => {
+test('totalSumCSV', () => {
   expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
   expect(totalSumCSV('147')).toStrictEqual(147);
 });
 
-test('removeVowels', () => {
+test.only('removeVowels', () => {
   expect(removeVowels('gregor')).toStrictEqual('grgr');
   expect(removeVowels('asdf')).toStrictEqual('sdf');
   expect(removeVowels('why')).toStrictEqual('why');

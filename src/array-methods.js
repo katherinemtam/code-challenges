@@ -53,7 +53,7 @@ export function totalSumCSV(str) {
 }
 
 export function removeVowels(str) {
-
+  return str.replace(/[aeiou]/ig, '');
 }
 
 export function extractVowels(str) {
