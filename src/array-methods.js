@@ -43,7 +43,13 @@ export function removeLastCharacters(str, numberOfCharacters) {
 
 // stretch goals 
 export function totalSumCSV(str) {
-
+  let sum = 0;
+  const split = str.split(',');
+  for (let numbers of split) {
+    const number = parseInt(numbers);
+    sum += number;
+  }
+  return sum;
 }
 
 export function removeVowels(str) {
