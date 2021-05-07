@@ -1,4 +1,11 @@
-import { evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './array-filter.js';
+import { fiveAndGreaterOnly, evensOnly, fiveCharactersOrFewerOnly, peopleWhoBelongToTheIlluminati, ofAge } from './array-filter.js';
+
+
+test('Five and greater only', () => {
+  const input = [3, 6, 8, 2]; // arrange
+  const output = fiveAndGreaterOnly(input); // act
+  expect(output).toEqual([6, 8]); // assert
+});
 
 test('evens only', () => {
   const input = [3, 6, 8, 2]; // arrange
