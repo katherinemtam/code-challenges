@@ -37,7 +37,8 @@ export function stepActions(recipe) {
 }
 
 export function removeLastCharacters(str, numberOfCharacters) {
-
+  if (numberOfCharacters > 0) return str.substr(0, str.length - numberOfCharacters);
+  if (numberOfCharacters < 0) return str;
 }
 
 // stretch goals 
