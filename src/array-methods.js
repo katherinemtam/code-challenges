@@ -57,5 +57,9 @@ export function removeVowels(str) {
 }
 
 export function extractVowels(str) {
-
+  const arr = [];
+  let consonants = str.match(/[^aeiou]/ig).join('');
+  let vowels = str.match(/[aeiou]/ig).sort().join('');
+  arr.push(consonants, vowels);
+  return arr;
 }
