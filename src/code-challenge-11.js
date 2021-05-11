@@ -8,7 +8,9 @@ export function findMax(matrix) {
 }
 
 export function totalSum(matrix) {
-    
+  let total = 0;
+  matrix.map(arr => arr.map(n => total += n));
+  return total;
 }
 
 const hoursOpen = ['9 a.m.', '10 a.m.', '11 a.m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.', '8 p.m.'];

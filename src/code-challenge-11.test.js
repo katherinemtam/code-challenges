@@ -5,11 +5,11 @@ test('it should return the last 10 characters of a string as an array', () => {
   expect(returnTen('world')).toStrictEqual(['w', 'o', 'r', 'l', 'd']);
 });
 
-test.only('it should take in a matrix of positive numbers and return the number with the highest value', () => {
+test('it should take in a matrix of positive numbers and return the number with the highest value', () => {
   expect(findMax([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(24);
 });
 
-test('it should take in a matrix of numbers and return the totalSum of all the numbers', () => {
+test.only('it should take in a matrix of numbers and return the totalSum of all the numbers', () => {
   expect(totalSum([[13, 24, 24, 2], [2, 5, 6], [2, 3]])).toStrictEqual(81);
   expect(totalSum([])).toStrictEqual(0);
 });
