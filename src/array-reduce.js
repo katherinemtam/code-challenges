@@ -12,3 +12,11 @@ export const addPurchases = arr => {
     return accumulator;
   }, 0); 
 };
+
+export const countNumberOfElements = arr => {
+  return arr.reduce((accumulator) => {
+    console.log(accumulator);
+    return accumulator + 1;
+  }, 0);
+};
+

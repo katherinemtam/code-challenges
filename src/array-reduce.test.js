@@ -1,4 +1,4 @@
-import { toLastNames, addValues, addPurchases } from './array-reduce';
+import { toLastNames, addValues, addPurchases, countNumberOfElements } from './array-reduce';
 
 test("iterates over an array of people objects and creates a new list of each person's full name using the array method 'map'", () => {
   const input = [{ firstName:'Jane', lastName:'Doe' }, { firstName:'James', lastName:'Bond' }];
@@ -12,7 +12,7 @@ test('uses reduce to add the values in the array', () => {
   expect(addValues(input)).toStrictEqual(output);
 });
 
-test('uses reduce to find the total amount purchased', () => {
+test('uses reduce to count the number of elements in the array', () => {
   const input = [
     {
       item: 'switch',
@@ -29,4 +29,10 @@ test('uses reduce to find the total amount purchased', () => {
   ];
   const output = 1197;
   expect(addPurchases(input)).toStrictEqual(output);
+});
+
+test('uses reduce to count the number of elements in the array', () => {
+  const input = [2, 4, 6, 8, 10];
+  const output = 5;
+  expect(countNumberOfElements(input)).toStrictEqual(output);
 });
