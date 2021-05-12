@@ -5,3 +5,10 @@ export const toLastNames = people => {
 export const addValues = arr => {
   return arr.reduce((total, value) => total += value, 0);
 };
+
+export const addPurchases = arr => {
+  return arr.reduce((accumulator, value) => {
+    accumulator += value.purchasePrice;
+    return accumulator;
+  }, 0); 
+};
