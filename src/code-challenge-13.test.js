@@ -45,14 +45,14 @@ let characters = [
   }
 ];
 
-describe.only('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should sort the characters by number of children', () => {
     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
 
-describe('Testing challenge 2', () => {
+describe.only('Testing challenge 2', () => {
   test('It should return true if it has a W', () => {
     expect(containsW('hello world')).toStrictEqual(true);
     expect(containsW('Hello World')).toStrictEqual(false);
