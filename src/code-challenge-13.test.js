@@ -52,7 +52,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-describe.only('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return true if it has a W', () => {
     expect(containsW('hello world')).toStrictEqual(true);
     expect(containsW('Hello World')).toStrictEqual(false);
@@ -60,7 +60,7 @@ describe.only('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+describe.only('Testing challenge 3', () => {
   test('It should return true if it has a number', () => {
     expect(isNum(1234567890)).toStrictEqual(true);
     expect(isNum('12345')).toStrictEqual(true);

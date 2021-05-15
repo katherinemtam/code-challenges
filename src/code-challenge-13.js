@@ -11,10 +11,10 @@ export const containsW = (str) => {
   return false;
 };
 
-// export const isNum = (input) => {
-//   if (input.search(/(\d+)/)) return true;
-//   return false;
-// };
+export const isNum = (input) => {
+  if (input.toString().match(/[0-9]/g)) return true;
+  return false;
+};
 
 export const containsWorld = (input) => {
 
