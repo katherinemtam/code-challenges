@@ -17,7 +17,8 @@ export const isNum = (input) => {
 };
 
 export const containsWorld = (input) => {
-
+  if (input.match(/world/)) return true;
+  return false;
 };
 
 export const isCapitalized = (str) => {

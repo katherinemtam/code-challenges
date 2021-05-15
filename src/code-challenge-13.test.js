@@ -60,7 +60,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-describe.only('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return true if it has a number', () => {
     expect(isNum(1234567890)).toStrictEqual(true);
     expect(isNum('12345')).toStrictEqual(true);
@@ -69,7 +69,7 @@ describe.only('Testing challenge 3', () => {
     expect(isNum('')).toStrictEqual(false);
   });
 });
-describe('Testing challenge 4', () => {
+describe.only('Testing challenge 4', () => {
   test('It should return true if it has world, case sensitive', () => {
     expect(containsWorld('hello world')).toStrictEqual(true);
     expect(containsWorld('Hello World')).toStrictEqual(false);
