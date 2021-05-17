@@ -22,5 +22,5 @@ export const containsWorld = (input) => {
 };
 
 export const isCapitalized = (str) => {
-
+  return str.match(/[A-Z][a-zA-Z]*/g) || [];
 };
