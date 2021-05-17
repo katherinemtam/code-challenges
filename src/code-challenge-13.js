@@ -24,3 +24,11 @@ export const containsWorld = (input) => {
 export const isCapitalized = (str) => {
   return str.match(/[A-Z][a-zA-Z]*/g) || [];
 };
+
+export const citiesAtoJ = (arr) => {
+  const results = [];
+  for (let string of arr) {
+    if (/^[A-J][a-zA-Z]*/g.test(string)) results.push(string);
+  }
+  return results;
+};
