@@ -11,15 +11,24 @@ export const containsW = (str) => {
   return false;
 };
 
-// export const isNum = (input) => {
-//   if (input.search(/(\d+)/)) return true;
-//   return false;
-// };
+export const isNum = (input) => {
+  if (input.toString().match(/[0-9]/g)) return true;
+  return false;
+};
 
 export const containsWorld = (input) => {
-
+  if (input.match(/world/)) return true;
+  return false;
 };
 
 export const isCapitalized = (str) => {
+  return str.match(/[A-Z][a-zA-Z]*/g) || [];
+};
 
+export const citiesAtoJ = (arr) => {
+  const results = [];
+  for (let string of arr) {
+    if (/^[A-J][a-zA-Z]*/g.test(string)) results.push(string);
+  }
+  return results;
 };
