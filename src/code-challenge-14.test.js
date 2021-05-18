@@ -1,8 +1,8 @@
 import { replaceZeros, validatePin, validateWord, hasNumber, validateEmail, validatePhoneNumber, findTagNames } from './code-challenge-14';
 
-describe('Testing challenge 1', () => {
+describe.only('Testing challenge 1', () => {
   test("It should replace all '0' with the word 'zero'", () => {
-    expect(replaceZeros('I have 0 pet kangaroos, and I have petted 0 kangaroos.')).toStrictEqual('I have 0 pet kangaroos, and I have petted 0 kangaroos.');
+    expect(replaceZeros('I have 0 pet kangaroos, and I have petted 0 kangaroos.')).toStrictEqual('I have zero pet kangaroos, and I have petted zero kangaroos.');
     expect(replaceZeros('00102')).toStrictEqual('zerozero1zero2');
   });
 });
@@ -27,8 +27,8 @@ describe('Testing challenge 3', () => {
 
 describe('Testing challenge 4', () => {
   test('It should return true if a string has one or more letter followed by one or more digit. Otherwise, return false. ', () => {
-    expect(validateWord('2fast2furious')).toStrictEqual(true);
-    expect(validateWord('cars go vroom')).toStrictEqual(false);
+    expect(hasNumber('2fast2furious')).toStrictEqual(true);
+    expect(hasNumber('cars go vroom')).toStrictEqual(false);
   });
 });
 

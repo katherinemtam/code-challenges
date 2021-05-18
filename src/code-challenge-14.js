@@ -1,28 +1,27 @@
-const replaceZeros = (string) => {
-  //<solution>
-
+export const replaceZeros = (string) => {
+  return string.replace(/0/g, 'zero');
 };
 
-const validatePin = (pin) => {
-  //<solution>
-};
-
-const validateWord = (word) => {
+export const validatePin = (pin) => {
   //<solution>
 };
 
-const hasNumber = (string) => {
+export const validateWord = (word) => {
   //<solution>
 };
 
-const validateEmail = (email) => {
+export const hasNumber = (string) => {
   //<solution>
 };
 
-const validatePhoneNumber = (phoneNumber) => {
+export const validateEmail = (email) => {
   //<solution>
 };
 
-const findTagNames = elements => {
+export const validatePhoneNumber = (phoneNumber) => {
+  //<solution>
+};
+
+export const findTagNames = elements => {
   ///Solution 
 };
