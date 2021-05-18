@@ -7,14 +7,14 @@ describe('Testing challenge 1', () => {
   });
 });
 
-describe.only('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return true if the PIN is four numerical digits long. Otherwise, return false', () => {
     expect(validatePin(1234)).toStrictEqual(true);
     expect(validatePin(123456789)).toStrictEqual(false);
   });
 });
 
-describe('Testing challenge 3', () => {
+describe.only('Testing challenge 3', () => {
   test('It should return true if the word is between 5 and 10 characters long. Otherwise, return false. ', () => {
     expect(validateWord('pen')).toStrictEqual(false);
     expect(validateWord('apple')).toStrictEqual(true);

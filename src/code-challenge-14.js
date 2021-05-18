@@ -7,7 +7,7 @@ export const validatePin = (pin) => {
 };
 
 export const validateWord = (word) => {
-  //<solution>
+  return /\b\w{5,10}\b/.test(word);
 };
 
 export const hasNumber = (string) => {
