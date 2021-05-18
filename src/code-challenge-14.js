@@ -11,7 +11,7 @@ export const validateWord = (word) => {
 };
 
 export const hasNumber = (string) => {
-  //<solution>
+  return /[a-zA-Z]+\d+/.test(string);
 };
 
 export const validateEmail = (email) => {

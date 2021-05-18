@@ -14,7 +14,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-describe.only('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return true if the word is between 5 and 10 characters long. Otherwise, return false. ', () => {
     expect(validateWord('pen')).toStrictEqual(false);
     expect(validateWord('apple')).toStrictEqual(true);
@@ -25,9 +25,10 @@ describe.only('Testing challenge 3', () => {
   });
 });
 
-describe('Testing challenge 4', () => {
+describe.only('Testing challenge 4', () => {
   test('It should return true if a string has one or more letter followed by one or more digit. Otherwise, return false. ', () => {
     expect(hasNumber('2fast2furious')).toStrictEqual(true);
+    expect(hasNumber('20dollars')).toStrictEqual(false);
     expect(hasNumber('cars go vroom')).toStrictEqual(false);
   });
 });
