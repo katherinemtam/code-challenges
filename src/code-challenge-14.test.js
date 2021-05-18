@@ -1,13 +1,13 @@
 import { replaceZeros, validatePin, validateWord, hasNumber, validateEmail, validatePhoneNumber, findTagNames } from './code-challenge-14';
 
-describe.only('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test("It should replace all '0' with the word 'zero'", () => {
     expect(replaceZeros('I have 0 pet kangaroos, and I have petted 0 kangaroos.')).toStrictEqual('I have zero pet kangaroos, and I have petted zero kangaroos.');
     expect(replaceZeros('00102')).toStrictEqual('zerozero1zero2');
   });
 });
 
-describe('Testing challenge 2', () => {
+describe.only('Testing challenge 2', () => {
   test('It should return true if the PIN is four numerical digits long. Otherwise, return false', () => {
     expect(validatePin(1234)).toStrictEqual(true);
     expect(validatePin(123456789)).toStrictEqual(false);

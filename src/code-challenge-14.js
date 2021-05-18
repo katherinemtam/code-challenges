@@ -3,7 +3,7 @@ export const replaceZeros = (string) => {
 };
 
 export const validatePin = (pin) => {
-  //<solution>
+  return /\b\d{4}\b/.test(pin);
 };
 
 export const validateWord = (word) => {
