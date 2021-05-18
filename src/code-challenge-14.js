@@ -14,9 +14,9 @@ export const hasNumber = (string) => {
   return /[a-zA-Z]+\d+/.test(string);
 };
 
-export const validateEmail = (email) => {
-  //<solution>
-};
+// export const validateEmail = (email) => {
+//   return /[\w\.?\w*]@[\w.-]+\.[(net)(com)(org)]/.test(email);
+// };
 
 export const validatePhoneNumber = (phoneNumber) => {
   //<solution>
